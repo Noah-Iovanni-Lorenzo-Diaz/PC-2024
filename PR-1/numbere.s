@@ -41,7 +41,7 @@ if:
     bc1t        then            # Branch if error < 0.00001
 
     li.d        $f4, 1.0        # Loading second limit into f4
-    c.lt.d      $f20, $f4      # Compare error < 1
+    c.lt.d      $f20, $f4       # Compare error < 1
     bc1f        then            # Branch if error >= 1
     
     b           else            # Branch if both are false
@@ -75,25 +75,25 @@ while: # ultimo_termino >= error
     sdc1        $f24, e             # Save the obtained result into e
     sdc1        $f26, numterminos   # Save num of terms obtained into numterminos
 
-    li		    $v0, 4          # system call #4 - print string
+    li		    $v0, 4              # system call #4 - print string
     la		    $a0, cade
-    syscall					    # execute
+    syscall					        # execute
 
-    li		    $v0, 3          # system call #4 - print string
-    ldc1        $f12, e         # Store the value of e into f12
-    syscall					    # execute
+    li		    $v0, 3              # system call #4 - print string
+    ldc1        $f12, e             # Store the value of e into f12
+    syscall					        # execute
 
-    li		    $v0, 4          # system call #4 - print string
+    li		    $v0, 4              # system call #4 - print string
     la		    $a0, cadnt
-    syscall					    # execute
+    syscall					        # execute
 
     li		    $v0, 3              # system call #4 - print string
     ldc1        $f12, numterminos   # Store the value of numterminos into f12
     syscall					        # execute
 
-    li		    $v0, 4          # system call #4 - print string
+    li		    $v0, 4              # system call #4 - print string
     la		    $a0, cadfin
-    syscall					    # execute
+    syscall					        # execute
 
-    li	        $v0, 10		    # System call 10 - Exit
-    syscall					    # execute
+    li	        $v0, 10		        # System call 10 - Exit
+    syscall					        # execute
