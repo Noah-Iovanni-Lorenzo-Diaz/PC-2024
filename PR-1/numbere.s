@@ -111,5 +111,30 @@ while:
     bc1f        while                   # Branch if ultimo_termino >= error
 
 # BREAK:
-    sdc1        $f24, e             # Save the obtained result into e
+    sdc1        $f24, e                 # Save the obtained result into e
     sdc1        $f26, numterminos   # Save obtained number of terms into numterminos
+    
+    li		    $v0, 4          # system call #4 - print string
+    la		    $a0, cade       # Load string "cade" for printing
+    syscall					    # execute
+
+    li		    $v0, 3          # system call #3 - print double
+    ldc1        $f12, e         # Load the value of e for printing
+    syscall					    # execute
+
+    li		    $v0, 4          # system call #4 - print string
+    la		    $a0, cadnt      # Load string "cadnt" for printing
+    syscall					    # execute
+
+    li		    $v0, 3              # system call #3 - print double
+    ldc1        $f12, numterminos   # Load the value of numterminos for printing
+    syscall					        # execute
+
+    li		    $v0, 4          # system call #4 - print string
+    la		    $a0, cadfin     # Load string "cadfin" for printing
+    syscall					    # execute
+
+    li	        $v0, 10		    # System call 10 - Exit
+    syscall					    # execute
+
+##END
