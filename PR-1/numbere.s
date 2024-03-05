@@ -1,6 +1,6 @@
 # PR1. PRINCIPIO DE COMPUTADORES.
 # Autor: Noah Iovanni Lorenzo Díaz
-# Fecha ultima modificacion:
+# Fecha ultima modificacion: 28/02/2024
 
 # #include <iostream>
 # #include <iomanip>
